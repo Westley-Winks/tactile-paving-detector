@@ -1,0 +1,26 @@
+https://overpass-turbo.eu/#
+
+for nodes with tactile paving:
+[timeout:600]
+
+(node
+  [tactile_paving=yes]
+  ({{bbox}});) -> .a;
+
+node.a
+  [mapillary]
+  ({{bbox}});
+out;
+
+for nodes without tactile paving equal
+to the number of nodes with tactile paving:
+[timeout:600];
+
+(node
+  [mapillary]
+  ({{bbox}});) -> .a;
+
+node.a
+  [tactile_paving=no]
+  ({{bbox}});
+out 6203;

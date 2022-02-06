@@ -1,0 +1,7 @@
+.env
+*.pdf
+*.txt
+!query.txt
+*.geojson
+*.pdf
+split-images/

@@ -1,7 +1,7 @@
 # Tactile Paving Mapper: Project Overview
 ---
-- Scraped over 12,000 images from OpenStreetMap and Mapillary
-- Initial model had no statistical power (not better than guessing)
+- Scraped over 12,000 images and iterated through several CNN architectures to classify whether or not an image contained tactile paving
+- Due to messy crowd-sourced data, models did no better than guessing. Future work is to manually label and localize tactile paving in images to create a tool to map accessibility resources in cities
 
 ## Problem
 ---
@@ -39,7 +39,7 @@ Images labeled as having tactile paving and a Mapillary image:
 ---
 - Fine tune VGG16 model
 - Try other base models (XCeption, YOLO, ResNet, etc.)
-- Get better data by manually filtering and labelling images
+- **Get better data by manually filtering and labelling images**
 - Once sufficiently accurate: Map Bend, OR!
 
 ## References

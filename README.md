@@ -40,6 +40,7 @@ Images labeled as having tactile paving and a Mapillary image:
 - Fine tune VGG16 model
 - Try other base models (XCeption, YOLO, ResNet, etc.)
 - **Get better data by manually filtering and labelling images**
+- **Get better data by using the `tactile_paving=contrasted` key in OSM.** This might be easier for the net to detect.
 - Once sufficiently accurate: Map Bend, OR!
 
 ## References

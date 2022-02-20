@@ -5,3 +5,5 @@
 *.geojson
 *.pdf
 split-images/
+filtered-images/
+hugging-face-model.ipynb

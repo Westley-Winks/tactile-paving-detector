@@ -48,3 +48,4 @@ Images labeled as having tactile paving and a Mapillary image:
 - Venkatesh G M, Bianca Pereira, and Suzanne Little. Urban Footpath Image Dataset to Assess Pedestrian Mobility. *UrbanMM ’21, October 20–24, 2021, Virtual Event, China*
 - Rodrigo Fuentes. Garbage Route Optimization Using Computer Vision Object Detection
 - Francois Chollet. Deep Learning with Python. ISBN 9781617294433
+- Philipp Schmid. Image Classification with Hugging Face Transformers and `Keras` (https://www.philschmid.de/image-classification-huggingface-transformers-keras). For dataset creation function.

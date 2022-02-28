@@ -1,7 +1,8 @@
 # Tactile Paving Mapper: Project Overview
 ---
 - Scraped over 12,000 images and iterated through several CNN architectures to classify whether or not an image contained tactile paving
-- Due to messy crowd-sourced data, models did no better than guessing. Future work is to manually label and localize tactile paving in images to create a tool to map accessibility resources in cities
+- Due to messy crowd-sourced data, models did no better than guessing.
+- I messaged the authors of [this](https://doras.dcu.ie/26261/) paper and they were kind enough to send me 2,119 annotated images. Huge shout out to them!
 
 ## Problem
 ---
@@ -11,7 +12,7 @@ People with vision problems need resources in the built world to help them navig
 
 Cities should be built around the people that live there. But how do we know if our cities are, in fact, accessible and inclusive? What if we could push images of our cities through a machine learning model and produce a heatmap of where infrastructure building should be prioritized?
 
-That is the goal of this project. A machine learning model with be trained to classify images based on whether tactile paving is detected or not. This can be used by city government and citizens alike to get a better understanding of the accessibility landscape of their built environment, wherever that may be.
+That is the goal of this project. A machine learning model with be trained to detect tactile paving in an image. EXIF data will be pulled from the images to get a approximate location for generating a heat map. This can be used by city government and citizens alike to get a better understanding of the accessibility landscape of their built environment, wherever that may be.
 
 ## Tools
 ---
@@ -21,26 +22,18 @@ That is the goal of this project. A machine learning model with be trained to cl
 
 ## Data
 ---
-- Scraped over 12,000 images from OpenStreetMap and Mapillary
-- Images are crowd sourced and open source; the quality might not be optimal
-- A sample of images are provided in the `sample-images` folder. This contains the same directory structure as the images used in the models but only contains 10 of each split to serve as an example.
-- All images were downloaded from [Mapillary](https://www.mapillary.com/). Mapillary does not endorse me or the use of the images in this project
-
-Images labeled as having tactile paving and a Mapillary image:
-![Nodes containing tactile paving and a mapillary image](query-bbox.png)
+- All the data is from the kind folks at the [Crowd4Access Project!](https://crowd4access.insight-centre.org/)
+- Data was crowd sourced by citizens in Ireland generating photos of streets and footpaths
+- Over 2,000 of these images were annotated by hand to create a bounding box around the tactile paving in those images
 
 ## Model
 ---
-- Models were built to classify images: 1 if tactile paving was detected in the image and 0 if tactile paving was not detected in the images
-- Tried many simple CNN's built from scratch with convolutional and max pooling layers. Models had no statistical power (with a validation accuracy of 0.5, it had the same accuracy as simply guessing)
-- Used a pre-trained VGG16 model as a base model. Used a custom classification head with flattening and fully connected layers. This model *barely* had statistical significance
+- Will try a transformer model using Hugging Face
+- Will try a YOLO model
 
 ## Future Work
 ---
-- Fine tune VGG16 model
 - Try other base models (XCeption, YOLO, ResNet, etc.)
-- **Get better data by manually filtering and labelling images**
-- **Get better data by using the `tactile_paving=contrasted` key in OSM.** This might be easier for the net to detect.
 - Once sufficiently accurate: Map Bend, OR!
 
 ## References
@@ -48,4 +41,3 @@ Images labeled as having tactile paving and a Mapillary image:
 - Venkatesh G M, Bianca Pereira, and Suzanne Little. Urban Footpath Image Dataset to Assess Pedestrian Mobility. *UrbanMM ’21, October 20–24, 2021, Virtual Event, China*
 - Rodrigo Fuentes. Garbage Route Optimization Using Computer Vision Object Detection
 - Francois Chollet. Deep Learning with Python. ISBN 9781617294433
-- Philipp Schmid. Image Classification with Hugging Face Transformers and `Keras` (https://www.philschmid.de/image-classification-huggingface-transformers-keras). For dataset creation function.

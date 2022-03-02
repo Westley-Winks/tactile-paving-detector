@@ -41,3 +41,5 @@ That is the goal of this project. A machine learning model with be trained to de
 - Venkatesh G M, Bianca Pereira, and Suzanne Little. Urban Footpath Image Dataset to Assess Pedestrian Mobility. *UrbanMM ’21, October 20–24, 2021, Virtual Event, China*
 - Rodrigo Fuentes. Garbage Route Optimization Using Computer Vision Object Detection
 - Francois Chollet. Deep Learning with Python. ISBN 9781617294433
+- NielsRogge. Tutorial notebook using balloons. https://github.com/NielsRogge/Transformers-Tutorials/blob/master/DETR/Fine_tuning_DetrForObjectDetection_on_custom_dataset_(balloon).ipynb
+- https://huggingface.co/docs/transformers/training#finetuning-in-native-pytorch

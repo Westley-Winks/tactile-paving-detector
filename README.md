@@ -33,7 +33,8 @@ That is the goal of this project. A machine learning model with be trained to de
 
 ## Future Work
 ---
-- Try other base models (XCeption, YOLO, ResNet, etc.)
+- Try other base models (YOLO, etc.)
+- Try DETR with a different convolutional backbone
 - Once sufficiently accurate: Map Bend, OR!
 
 ## References

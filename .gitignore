@@ -6,6 +6,6 @@
 *.pdf
 split-images/
 filtered-images/
-hugging-face-model.ipynb
-huggingface-vit/
 crowd4access-images/
+runs/
+detr_tactile-paving/

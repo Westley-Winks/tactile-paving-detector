@@ -1,8 +1,7 @@
 # Tactile Paving Mapper: Project Overview
 ---
-- Scraped over 12,000 images and iterated through several CNN architectures to classify whether or not an image contained tactile paving
-- Due to messy crowd-sourced data, models did no better than guessing.
-- I messaged the authors of [this](https://doras.dcu.ie/26261/) paper and they were kind enough to send me 2,119 annotated images. Huge shout out to them!
+- Fine tuned DETR object detection model to detect tactile paving in images
+- I messaged the authors of [this](https://doras.dcu.ie/26261/) paper from the Crowd4Access project and they were kind enough to send me 2,119 annotated images. Huge shout out to them!
 
 ## Problem
 ---
@@ -16,7 +15,7 @@ That is the goal of this project. A machine learning model with be trained to de
 
 ## Tools
 ---
-**Packages:** requests, matplotlib, tensorflow, keras
+**Packages:** pytorch, transformers, tensorboard
 
 **Environment:** conda, Jupyter, VSCode
 
@@ -28,13 +27,14 @@ That is the goal of this project. A machine learning model with be trained to de
 
 ## Model
 ---
-- Will try a transformer model using Hugging Face
+- Fine tuned DETR model with ResNet backbone from Hugging Face
 - Will try a YOLO model
 
 ## Future Work
 ---
 - Try other base models (YOLO, etc.)
 - Try DETR with a different convolutional backbone
+- Figure out best evaluation techniques for quantitatively evaluating models rather than qualitatively
 - Once sufficiently accurate: Map Bend, OR!
 
 ## References
@@ -43,4 +43,3 @@ That is the goal of this project. A machine learning model with be trained to de
 - Rodrigo Fuentes. Garbage Route Optimization Using Computer Vision Object Detection
 - Francois Chollet. Deep Learning with Python. ISBN 9781617294433
 - NielsRogge. Tutorial notebook using balloons. https://github.com/NielsRogge/Transformers-Tutorials/blob/master/DETR/Fine_tuning_DetrForObjectDetection_on_custom_dataset_(balloon).ipynb
-- https://huggingface.co/docs/transformers/training#finetuning-in-native-pytorch

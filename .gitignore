@@ -1,12 +1,8 @@
 .env
-*.pdf
-*.txt
-!query.txt
+data/
+notes/
 *.geojson
-*.pdf
-split-images/
-filtered-images/
-crowd4access-images/
-runs/
-detr_tactile-paving/
+*.bin
 detr/
+runs/
+.ipynb_checkpoints/

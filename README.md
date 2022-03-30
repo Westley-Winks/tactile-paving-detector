@@ -15,7 +15,7 @@ That is the goal of this project. A machine learning model with be trained to de
 
 ## Tools
 ---
-**Packages:** pytorch, transformers, tensorboard
+**Packages:** pytorch, transformers, tensorboard, tensorflow, keras
 
 **Environment:** conda, Jupyter, VSCode
 
@@ -28,13 +28,12 @@ That is the goal of this project. A machine learning model with be trained to de
 ## Model
 ---
 - Fine tuned DETR model with ResNet backbone from Hugging Face
-- Will try a YOLO model
+- In progress: Building custom model inspired by YOLO (without dividing the image)
 
 ## Future Work
 ---
-- Try other base models (YOLO, etc.)
+- Try other models (YOLO, R-CNN etc.)
 - Try DETR with a different convolutional backbone
-- Figure out best evaluation techniques for quantitatively evaluating models rather than qualitatively
 - Once sufficiently accurate: Map Bend, OR!
 
 ## References
